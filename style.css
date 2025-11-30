@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Echoed Vandalism';
+    src: url('fonts/echoed-vandalism.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --purple-dark: #60114f;
+    --purple-mid: #a45d95;
+    --purple-light: #d796ca;
+    --green-dark: #425d00;
+    --green-mid: #688916;
+    --green-bright: #84a92a;
+    --green-light: #bcdc6e;
+    --mauve: #65507a;
+    --red: #c22222;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +25,8 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(145deg, var(--purple-dark) 0%, #1a0a16 50%, var(--green-dark) 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -31,8 +51,9 @@ header {
     margin: 0 auto 1rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #e94560;
-    background: #2a2a4a;
+    border: 2px solid var(--purple-light);
+    background: rgba(96, 17, 79, 0.3);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,16 +66,18 @@ header {
 }
 
 h1 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #ffffff;
+    font-family: 'Echoed Vandalism', 'Space Grotesk', sans-serif;
+    font-size: 2.25rem;
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    color: var(--green-light);
+    letter-spacing: 0.02em;
 }
 
 .bio {
     font-size: 0.95rem;
-    color: #b8b8d1;
-    line-height: 1.5;
+    color: var(--purple-light);
+    line-height: 1.6;
 }
 
 main {
@@ -67,80 +90,64 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 0.875rem;
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--purple-mid);
+    border-radius: 8px;
     color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    transition: all 0.2s ease;
-    backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
 }
 
 .link-button:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(164, 93, 149, 0.15);
+    border-color: var(--purple-light);
     transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(96, 17, 79, 0.3);
 }
 
-.link-button .icon {
+.link-button i {
     font-size: 1.25rem;
+    width: 1.5rem;
+    text-align: center;
+    color: var(--green-light);
 }
 
 .link-button.shop {
-    background: linear-gradient(135deg, #e94560 0%, #c73e54 100%);
-    border-color: #e94560;
+    background: rgba(132, 169, 42, 0.1);
+    border-color: var(--green-bright);
 }
 
 .link-button.shop:hover {
-    background: linear-gradient(135deg, #f25672 0%, #e94560 100%);
-}
-
-.link-button.instagram {
-    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
-    border-color: transparent;
-}
-
-.link-button.instagram:hover {
-    opacity: 0.9;
-}
-
-.link-button.tiktok {
-    background: linear-gradient(135deg, #000000 0%, #25f4ee 50%, #fe2c55 100%);
-    border-color: transparent;
-}
-
-.link-button.tiktok:hover {
-    opacity: 0.9;
-}
-
-.link-button.facebook {
-    background: #1877f2;
-    border-color: #1877f2;
-}
-
-.link-button.facebook:hover {
-    background: #2084f8;
+    background: rgba(132, 169, 42, 0.25);
+    border-color: var(--green-light);
+    box-shadow: 0 4px 20px rgba(132, 169, 42, 0.3);
 }
 
 .link-button.location {
+    flex-direction: row;
+    text-align: left;
+}
+
+.link-button .location-text {
+    display: flex;
     flex-direction: column;
-    gap: 0.25rem;
-    padding: 1.25rem 1.5rem;
+    gap: 0.125rem;
 }
 
 .link-button .subtext {
     font-size: 0.8rem;
     font-weight: 400;
-    opacity: 0.8;
+    color: var(--purple-light);
 }
 
 footer {
     margin-top: 2rem;
-    color: #6b6b8a;
+    color: var(--mauve);
     font-size: 0.8rem;
 }
 
@@ -151,7 +158,7 @@ footer {
     }
     
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
     
     .link-button {
