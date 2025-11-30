@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Echoed Vandalism';
-    src: url('fonts/Echoed-Vandalism.woff2') format('woff2');
+    src: url('./fonts/Echoed-Vandalism.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -29,11 +29,11 @@ body {
     background: 
         linear-gradient(
             145deg, 
-            rgba(96, 17, 79, 0.85) 0%, 
-            rgba(26, 10, 22, 0.9) 50%, 
-            rgba(66, 93, 0, 0.85) 100%
+            rgba(96, 17, 79, 0.9) 0%, 
+            rgba(26, 10, 22, 0.95) 50%, 
+            rgba(66, 93, 0, 0.9) 100%
         ),
-        url('images/background.webp');
+        url('./images/background.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -55,32 +55,20 @@ header {
     margin-bottom: 2rem;
 }
 
-.avatar {
-    width: 200px;
-    height: auto;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo {
+    width: 85%;
+    max-width: 408px;
+    margin: 0 auto 1.5rem;
 }
 
-.avatar img {
+.logo img {
     width: 100%;
     height: auto;
-    object-fit: contain;
-}
-
-h1 {
-    font-family: 'Echoed Vandalism', 'Space Grotesk', sans-serif;
-    font-size: 2.25rem;
-    font-weight: normal;
-    margin-bottom: 0.75rem;
-    color: var(--green-light);
-    letter-spacing: 0.02em;
 }
 
 .bio {
-    font-size: 0.95rem;
+    font-family: 'Echoed Vandalism', 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
     color: var(--purple-light);
     line-height: 1.6;
 }
@@ -157,12 +145,12 @@ footer {
 }
 
 @media (max-width: 380px) {
-    .avatar {
-        width: 160px;
+    .logo {
+        width: 90%;
     }
     
-    h1 {
-        font-size: 1.75rem;
+    .bio {
+        font-size: 1rem;
     }
     
     .link-button {
