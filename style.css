@@ -56,13 +56,19 @@ header {
 }
 
 .logo {
-    width: 240px;
-    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875rem;
+    padding: 1rem 1.5rem;
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875rem;
+    padding: 1rem 1.5rem;
 }
 
 .bio {
@@ -88,7 +94,7 @@ main {
     border-radius: 8px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: all 0.25s ease;
     backdrop-filter: blur(8px);
 }
@@ -102,7 +108,7 @@ main {
 
 .link-button i {
     font-size: 1.25rem;
-    width: 1.5rem;
+    width: 1.75rem;
     text-align: center;
     color: var(--green-light);
 }
@@ -131,7 +137,7 @@ main {
 
 .link-button .subtext {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--purple-light);
 }
 
@@ -139,7 +145,7 @@ footer {
     margin-top: 2rem;
     font-family: 'Courier New', Courier, monospace;
     color: var(--mauve);
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 380px) {
@@ -148,11 +154,11 @@ footer {
     }
     
     .bio {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     
     .link-button {
         padding: 0.875rem 1.25rem;
-        font-size: 0.95rem;
+        font-size: 1.25rem;
     }
 }
