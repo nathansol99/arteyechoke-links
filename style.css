@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Echoed Vandalism';
-    src: url('./fonts/Echoed-Vandalism.woff2') format('woff2');
+    src: url('/fonts/Echoed-Vandalism.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@
 }
 
 body {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Echoed Vandalism', sans-serif;
     background: 
         linear-gradient(
             145deg, 
@@ -33,7 +33,7 @@ body {
             rgba(26, 10, 22, 0.95) 50%, 
             rgba(66, 93, 0, 0.9) 100%
         ),
-        url('./images/background.webp');
+        url('/images/background.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -56,8 +56,7 @@ header {
 }
 
 .logo {
-    width: 85%;
-    max-width: 408px;
+    width: 240px;
     margin: 0 auto 1.5rem;
 }
 
@@ -67,7 +66,6 @@ header {
 }
 
 .bio {
-    font-family: 'Echoed Vandalism', 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
     color: var(--purple-light);
     line-height: 1.6;
@@ -91,7 +89,6 @@ main {
     color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 500;
     transition: all 0.25s ease;
     backdrop-filter: blur(8px);
 }
@@ -133,20 +130,21 @@ main {
 }
 
 .link-button .subtext {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 0.8rem;
-    font-weight: 400;
     color: var(--purple-light);
 }
 
 footer {
     margin-top: 2rem;
+    font-family: 'Courier New', Courier, monospace;
     color: var(--mauve);
     font-size: 0.8rem;
 }
 
 @media (max-width: 380px) {
     .logo {
-        width: 90%;
+        width: 200px;
     }
     
     .bio {
